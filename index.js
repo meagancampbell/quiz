@@ -12,7 +12,7 @@ function askForName() {
   let greetingString = ('Hello candidate ' + candidateName);
   console.log(greetingString.toLowerCase());
 }
-
+askForName();
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 let question1 = ['1. Who was the first American woman in space?' + '\n'];
 let question2 = ['2. True or false: 5 kilometer = 5000 meters?'+ '\n'];
@@ -87,7 +87,7 @@ while (i < questions.length ){
 
 
 function runProgram() {
-  askForName();
+  
   // TODO 1.1c: Ask for candidate's name //
   askQuestion();
   checkAnswers();
