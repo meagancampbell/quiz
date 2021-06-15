@@ -3,15 +3,19 @@ const input = require('readline-sync');
 // TODO 2: modify your quiz app to ask 5 questions //
 
 // TODO 1.1a: Define candidateName // 
-candidateName = input.question('Enter your name: ');
-console.log('Hello Astronaut Candidate ' + candidateName);
+// candidateName = input.question('Enter your name: ');
+// console.log('Hello Astronaut Candidate ' + candidateName);
 
-// function askForName() {
-//   // TODO 1.1b: Ask for candidate's name //
-//   candidateName = input.question('Candidate Name: ');
-//   console.log(candidateName);
-// }
-// askForName;
+function askForName() {
+  // TODO 1.1b: Ask for candidate's name //
+  let candidateName = input.question('Enter your name ');
+  let str = ('Hello candidate' );
+  return (str + candidateName).toUpperCase;
+}
+
+
+askForName ();
+//messageCandidate();
 
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 let question1 = ['1. Who was the first American woman in space?' + '\n'];
@@ -21,7 +25,7 @@ let question4 = ['4. Given the array [8,' + ' Orbit'+ ' ,' + 'Trajectory' + ' ,'
 let question5 = ['5. What is the minimum crew size for the ISS?'+ '\n'];
 let correctAnswer = true;
 let candidateAnswer;
-let questions = [[question1, question2, question3, question4, question5]];
+let questions = [question1, question2, question3, question4, question5];
 let correctAnswers = ['sally ride', 'true', '40', 'Trajectory', '3' ];
 let candidateAnswers = [];
 
@@ -29,7 +33,6 @@ let candidateAnswers = [];
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
   candidateAnswer = input.question(questions[i]);
-   
  
 }
 // if (candidateAnswers != correctAnswers ) {
@@ -44,10 +47,11 @@ let i = 0;
 while (i < questions.length ){
     candidateAnswers[i] = input.question(questions[i]);
     i++;
+
 }
 
 
-  let grade = '';
+let grade = '';
     for (let i = 0; i < correctAnswers.length; i++){
       if (correctAnswers[i] === candidateAnswers[i]);
      
@@ -94,7 +98,7 @@ function runProgram() {
   // TODO 1.1c: Ask for candidate's name //
   
   askQuestion();
-  gradeQuiz(this.candidateAnswers);
+  //gradeQuiz(this.candidateAnswers);
 }
 
 // Don't write any code below this line //
