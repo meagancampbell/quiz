@@ -22,7 +22,7 @@ let question5 = ['5. What is the minimum crew size for the ISS?'+ '\n'];
 let correctAnswer = true;
 let candidateAnswer;
 let questions = [question1, question2, question3, question4, question5];
-let correctAnswers = ['sally ride', 'true', '40', 'Trajectory', '3' ];
+let correctAnswers = ['sally ride', 'true', '40', 'trajectory', '3' ];
 let candidateAnswers = [];
 let candidateGrade;
 
@@ -45,18 +45,15 @@ let i = 0;
 while (i < questions.length ){
     candidateAnswers[i] = input.question(questions[i]);
     i++;
-
 }
 
-let grade = 0;
 
-let grade = '';
-    for (let i = 0; i < correctAnswers.length; i++){
-      if (candidateAnswers[i] === correctAnswers[i]);
-  candidateGrade = correctAnswers[i] - candidateAnswers[i];
-}
+// function quizResults(){
+//     for (let i = 0; i < correctAnswers.length; i++){
+//   let grade = correctAnswers[i] - candidateAnswers[];
+// }
 
-return candidateGrade;
+// return grade;
 
 
 
