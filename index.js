@@ -9,8 +9,8 @@ const input = require('readline-sync');
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
   let candidateName = input.question('Enter your name ');
-  let str = ('Hello candidate' );
-  return (str + candidateName).toUpperCase;
+  console.log ('Hello candidate ' + candidateName ).toUpperCase();
+  
 }
 
 
