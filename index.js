@@ -3,7 +3,7 @@ const input = require('readline-sync');
 // TODO 2: modify your quiz app to ask 5 questions //
 
 // TODO 1.1a: Define candidateName // 
-candidateName = input.question('Enter your name: ').toUpperCase();
+candidateName = input.question('Enter your name: ');
 console.log('Hello Astronaut Candidate ' + candidateName);
 
 // function askForName() {
@@ -15,41 +15,44 @@ console.log('Hello Astronaut Candidate ' + candidateName);
 
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 let question1 = ['1. Who was the first American woman in space?' + '\n'];
-let question2 = ['2. True or false: 5 kilometer == 5000 meters?'+ '\n'];
-let question3 = ['3. (5 + 3)/2 * 10 = ' + '\n'];
+let question2 = ['2. True or false: 5 kilometer = 5000 meters?'+ '\n'];
+let question3 = ['3. (5 + 3)/2 * 10 ='  + '\n'];
 let question4 = ['4. Given the array [8,' + ' Orbit'+ ' ,' + 'Trajectory' + ' ,' + '45] what entry is at index 2?' + '\n'];
 let question5 = ['5. What is the minimum crew size for the ISS?'+ '\n'];
 let correctAnswer = true;
 let candidateAnswer;
-let questions = [question1, question2, question3, question4, question5];
-let correctAnswers = ['sally ride', 'true', 40, 'Trajectory', '3' ];
+let questions = [[question1, question2, question3, question4, question5]];
+let correctAnswers = ['sally ride', 'true', '40', 'Trajectory', '3' ];
 let candidateAnswers = [];
 
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-  candidateAnswer = input.question('question').toUpperCase();
- if (candidateAnswer != correctAnswer ) {
-   console.log('Sorry.' + '\n');
-} else {
-   console.log('Correct.' + '\n');
+  candidateAnswer = input.question(questions[i]);
+   
+ 
 }
+// if (candidateAnswers != correctAnswers ) {
+//    console.log('Sorry.' + '\n');
+// } else {
+//    console.log('Correct.' + '\n');
+//     }
+
 
 let i = 0;
 
 while (i < questions.length ){
-    candidateAnswers[i] = input.question(questions[i]).toUpperCase();
+    candidateAnswers[i] = input.question(questions[i]);
     i++;
 }
 
 
-//   let grade = '';
-//     for (let i = 0; i < correctAnswers.length; i++){
-//       if (correctAnswers[i] === candidateAnswers[i]);
-//       console.log('this is working');
-//     }
-//   //return grade = correctAnswers[i] - candidateAnswers[i];
-// }
+  let grade = '';
+    for (let i = 0; i < correctAnswers.length; i++){
+      if (correctAnswers[i] === candidateAnswers[i]);
+     
+  //return grade = correctAnswers[i] - candidateAnswers[i];
+}
 
 
 
@@ -79,12 +82,12 @@ while (i < questions.length ){
 
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-function gradeQuiz(candidateAnswers) {
-  for (let i = 0; i < questions.length; i++){
-    let grade = 0;
+// function gradeQuiz(candidateAnswers) {
+//   for (let i = 0; i < questions.length; i++){
+//     let grade = 0;
   
-  return grade;
-}
+//   return grade;
+// }
 
 function runProgram() {
   
