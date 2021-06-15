@@ -9,13 +9,9 @@ const input = require('readline-sync');
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
   let candidateName = input.question('Enter your name ');
-  console.log ('Hello candidate ' + candidateName ).toUpperCase();
-  
+  let greetingString = ('Hello candidate ' + candidateName);
+  console.log(greetingString.toLowerCase());
 }
-
-
-askForName ();
-//messageCandidate();
 
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 let question1 = ['1. Who was the first American woman in space?' + '\n'];
@@ -28,19 +24,21 @@ let candidateAnswer;
 let questions = [question1, question2, question3, question4, question5];
 let correctAnswers = ['sally ride', 'true', '40', 'Trajectory', '3' ];
 let candidateAnswers = [];
-
+let candidateGrade;
 
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-  candidateAnswer = input.question(questions[i]);
- 
+  candidateAnswer = input.question(questions[i].toLowerCase());
+    
+  //console.log(candidateAnswer);
 }
-// if (candidateAnswers != correctAnswers ) {
-//    console.log('Sorry.' + '\n');
-// } else {
-//    console.log('Correct.' + '\n');
-//     }
 
+// function checkAnswer(){
+//   (candidateAnswers != correctAnswers );
+//       console.log('Sorry.' + '\n');
+//     } else {
+//       console.log('Correct.' + '\n');
+// }
 
 let i = 0;
 
@@ -50,13 +48,15 @@ while (i < questions.length ){
 
 }
 
+let grade = 0;
 
 let grade = '';
     for (let i = 0; i < correctAnswers.length; i++){
-      if (correctAnswers[i] === candidateAnswers[i]);
-     
-  //return grade = correctAnswers[i] - candidateAnswers[i];
+      if (candidateAnswers[i] === correctAnswers[i]);
+  candidateGrade = correctAnswers[i] - candidateAnswers[i];
 }
+
+return candidateGrade;
 
 
 
@@ -87,17 +87,13 @@ let grade = '';
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 // function gradeQuiz(candidateAnswers) {
-//   for (let i = 0; i < questions.length; i++){
-//     let grade = 0;
-  
-//   return grade;
-// }
+
 
 function runProgram() {
-  
+  askForName();
   // TODO 1.1c: Ask for candidate's name //
-  
   askQuestion();
+  checkAnswers();
   //gradeQuiz(this.candidateAnswers);
 }
 
